@@ -1,27 +1,21 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import "./styles/App.css"
-import PostList from './components/PostList';
-import MyButton from './components/UI/Button/MyButton';
+import {BrowserRouter, Link, Route, Routes} from "react-router-dom"
+import Navbar from './components/UI/Navbar/Navbar';
+import AppRouter from './components/AppRouter';
 
 
 function App() {
+      return (
+      <BrowserRouter>
+        <Navbar />
+        <AppRouter />
 
-  const [posts, setPosts] = useState([
-    {id: 1, title: 'Javascript', body: 'Description'},
-    {id: 2, title: 'Javascript 2', body: 'Description'},
-    {id: 3, title: 'Javascript 3', body: 'Description'},
-  ])
-
-  return (
-    <div className="App">
-      <form>
-        <input type="text" placeholder='Название поста'/>
-        <input type="text" placeholder='Описание поста'/>
-        <MyButton>Создать новый пост</MyButton>
-      </form>
-      <PostList posts={posts} title={'Список постов 1'} />
-    </div>
-  );
+      </BrowserRouter>
+      )
 }
 
 export default App;
+
+
+

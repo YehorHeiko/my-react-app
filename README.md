@@ -1,4 +1,4 @@
 You can view my project at this link:
 
 
-https://yehorheiko.github.io/posts
+YehorHeiko.github.io/my-react-app
